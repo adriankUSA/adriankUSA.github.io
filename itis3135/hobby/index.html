@@ -1,31 +1,134 @@
 <!DOCTYPE html>
-<html>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <Title>Hobby</Title>
-    <link rel="stylesheet" href="styles/hobby.css">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+        <Title>Hobby</Title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #EDE9F5;
+                color: #3D52A0;
+                margin: 0;
+                padding: 0;
+                font-size: 18px; 
+                line-height: 1.6; 
+            }
+
+            header {
+                background-color: #3D52A0;
+                color: white;
+                text-align: center;
+                padding: 30px; 
+                font-size: 24px;
+            }
+
+            nav {
+                background-color: #7091E6;
+                color: white;
+                padding: 20px; 
+                font-size: 20px; 
+                text-align: center;
+            }
+
+            .nav {
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+                display: inline;
+                margin: 0 20px;
+            }
+
+            nav a:hover {
+                text-decoration: underline;
+            }
+
+            #section_title {
+                color: #3D52A0;
+                font-size: 28px; 
+                text-align: center;
+                margin: 30px 0; 
+            }
+
+            p, li {
+                color: #3D52A0;
+                font-size: 18px; 
+                margin-bottom: 15px; 
+                font-weight: 550px;
+            }
+
+            section {
+                background-color: #ADBBDA;
+                padding: 30px; 
+                margin: 30px; 
+                border-radius: 8px;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                display: none;
+            }
+            
+            .active {
+                display: block;
+            }
+
+            figure {
+                text-align: center;
+                margin: 30px 0; 
+            }
+
+            figure img {
+                max-width: 100%; 
+                height: auto;
+                border-radius: 8px;
+            }
+
+            figcaption {
+                color: #3D52A0;
+                font-style: italic;
+                font-size: 16px; 
+            }
+
+            a {
+                color: #7091E6;
+                text-decoration: none;
+                font-size: 18px;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+        </style>
+
+        <script>
+            document.getElementById("validation-link-html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+            document.getElementById("validation-link-css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    
+        </script>
+        <script src="script.js"></script>
+    </head>
+
     <body>
         <header>
             <h1>Adrian's Favorite Competitive Games</h1>
             <nav>
-                <span><a id="nav" href="#home">Home</a></span>
-                <span><a id="nav" href="#about_me">About Me</a></span>
-                <span><a id="nav" href="#best_times">Best Times</a></span>
-                <span><a id="nav" href="#where">Where to Play</a></span>
-                <span><a id="nav" href="#why">Why Climb</a></span>
-                <span><a id="nav" href="#how_to_climb">How to Climb</a></span>
-                <span><a id="nav" href="#ai_prompt">AI Prompts</a></span>
+                <span><a onclick="toggleSection('home')" class="nav" href="#home">Home</a></span>
+                <span><a onclick="toggleSection('about_me')" class="nav" href="#about_me">About Me</a></span>
+                <span><a onclick="toggleSection('best_times')" class="nav" href="#best_times">Best Times</a></span>
+                <span><a onclick="toggleSection('where')" class="nav" href="#where">Where to Find Me</a></span>
+                <span><a onclick="toggleSection('why')" class="nav" href="#why">Why Climb</a></span>
+                <span><a onclick="toggleSection('how_to_climb')" class="nav" href="#how_to_climb">How to Climb</a></span>
+                <span><a onclick="toggleSection('ai_prompt')" class="nav" href="#ai_prompt">AI Prompts</a></span>
             </nav>
         </header>
 
         <main>
             
-            <section id="home"> 
-                <h2 id="section_title">Welcome to my Hobby Page!</h2>
+            <section id="home" class="active"> 
+                <h2 class="section_title">My Hobby Page</h2>
                 <p>My biggest hobby is definitely playing video games. This includes arcade rhythm games, mobile games, role playing games, FPS games, RTS, but the one genre I cannot escape is <b>competitive video games</b>. 
                 <br>
                     I have reached the top .001% in Overwatch and Teamfight Tactics, and I am currently only Celestial II in Marvel Rivals (top ~0.50%) since I have not played ranked much.
-                    <br>
+                    </p>
                     <br>
                     The competitive games that I enjoy are:
                     <ul>
@@ -35,7 +138,7 @@
                         <li><b>Valorant</b>- A First Person Tactical shooter, where you either eliminate the enemy, successfully plant a spike, or defuse a spike, by Riot Games.</li>
                         <li><b>Tekken 8</b> - A 3D fighting game featuring original characters from representing a multitude of cultures who somehow understand each other while speaking different languages, by Bandai Namco</li>
                     </ul>
-                </p>
+                
 
                 <figure>
                     <img src="images/bp1.gif" alt="GIF of me dashing into multiple people as Marvel's Black Panther.">
@@ -43,8 +146,8 @@
                 </figure>
             </section>
 
-            <section id="about_me">
-                <h2 id="section_title">About Me</h2>
+            <section id="about_me" class="content">
+                <h2 class="section_title">About Me</h2>
                 <p>
                     I am currently the <b>Lead Teaching Assistant</b> for all of ITSC 2214, Data Structures and Algorithms. I am currently doing undergraduate research with Dr. Yonghong Yan and I am developing a Treatment Planning System website to perform 
                     radiation 
@@ -70,8 +173,32 @@
                 </figure>
             </section>
 
-            <section id="best_times">
-                <h2 id="section_title">Best Times</h2>
+            <section id="best_times" class="content">
+                <h2 class="section_title">Best Times</h2>
+                    <h3>Playing with Streamers and Pros</h3>
+                    <p>Some of my best moments are when I got into Overwatch games with streamers and pros that I watched:
+                    </p>
+                        <ul>
+                            <li>xQc</li>
+                            <li>Sleepy</li>
+                            <li>LiNkzr</li>
+                            <li>Kabaji</li>
+                            <li>m0xyy</li>
+                            <li>Crimzo</li>
+                            <li>Somjuu</li>
+                            <li>Space</li>
+                            <li>Kevin Durant</li>
+                        </ul>
+        
+                    <h3>Rank Achievements</h3>
+                    <p>My favorite ranked achievements are when I hit:
+                    </p>
+                        <ul>
+                            <li>Top 125 in Overwatch (rank 152 shown)</li>
+                            <li>Grandmaster in Teamfight Tactics (top 750)</li>
+                        </ul>
+                    
+
                 <figure>
                     <img src="images/top500.jpg" alt="Image of me hitting rank 152 on Overwatch.">
                     <figcaption> <i>When I hit rank 152 for the first time (peaked at 125) on Overwatch.</i></figcaption>
@@ -82,39 +209,93 @@
                 </figure>
             </section>
 
-            <section id="where">
-                <h2 id="section_title">Where Can You Play and Download?</h2>
+            <section id="where" class="content">
+                <h2 class="section_title">Where To Find Me?</h2>
+
+                <p>You can find me on twitch at <a href="https://www.twitch.tv/heybedhead"><b>https://www.twitch.tv/heybedhead</b></a></p>
+                <p>You can also my Marvel Rival stats on Tracker at <a href="https://tracker.gg/marvel-rivals/profile/ign/heybedhead/overview"><b>https://tracker.gg/marvel-rivals/profile/ign/heybedhead/overview</b></a></p>
+                <figure>
+                <img src="images/trackerMarvel.png" alt="Image of my Marvel Rival stats online.">
+                    <figcaption> <i>My Marvel Rivals stats this season. I can also play Starlord/Hela/Punisher/BP/Namor at this level but Bucky was too free.</i></figcaption>
+                </figure>
             </section>
 
-            <section id="why">
-                <h2>Why You Should Climb</h2>
+            <section id="why" class="content">
+                <h2 class="section_title">Why You Should Climb</h2>
+
+                <h3>Critical Thinking Skills</h3>
+                <p>One of the best things out of climbing into the highest ranks in video games is that you have to push yourself to problem solve, because every game is different.
+                   <br>
+                   A lot of people think these games are about mechanics, skill, and aim, when a way bigger portion is the ability to understand the fundamentals, manipulate those fundamentals and players
+                   while also constantly figuring out how to win every fight, every round, and every game. Map rotations, cooldown cycling, tempo, ability tracking... There are so many concepts to learn and 
+                   master that will take your gameplay and skills to the next level. 
+                   <br>
+                   <br>
+                   These games are essentially Data Structures & Algorithms or LeetCode problems. They are not just aim simulators.
+                </p>
+                
+                <h3>Modesty & The Path to Learning</h3>
+                <p>The only real way to grow and climb is to stop blaming your teammates, and focus on yourself, EVEN if a loss WAS because of someone else!
+                    <br>
+                    Some people never figure this out, and this is also reflected in the real world. So many people are unable to take accountability for their own actions, 
+                    and they find some excuse, someone or something to blame, when at the end of the day there is always something we can do better. Thats why I recommend
+                    learning to climb or grow in competitive settings, whether its sports or video games, you eventually need to focus on yourself!
+                </p>
+
+
                 <figure>
                 <img src="images/cel2_2.png" alt="Image of when I first hit Celestial II on Marvel Rivals.">
                     <figcaption> <i>When I first hit Celestial II on Marvel Rivals.</i></figcaption>
                 </figure>
             </section>
 
-            <section id="how_to_climb">
-                <h2 id="section_title">How to Climb</h2>
+            <section id="how_to_climb" class="content">
+                <h2 class="section_title">How to Climb</h2>
+                <h3>Learn From Yourself</h3>
+                <p>
+                    One important aspect in improvement is learning from your mistakes. This means rewatching your gameplay and noting what you could do better or what other things you 
+                    can try. This is called <b>VOD Reviewing</b>. Having other people do this with you helps too! 
+                </p>
+                <h3>Learn From Others</h3>
+                <p>
+                    Another strategy I used is to watch good streamers and coaches, and try to understand their habits and pick up their tips. I just try to learn at least one thing each time  
+                    <br>
+                    I watch a stream. It's hard to try to learn a bunch at once and also incorporate it into your gameplay.
+                </p>
+                <h3>Embrace Open Mindedness</h3>
+                <p>
+                    Sometimes people who are not high ranked also have good perspectives. Also, sometimes you have to break the proper "fundamentals" in order to win games, and this applies
+                    <br>
+                    heavily in very high elo. How else can you outbrain amazing players who also have mastered the fundamentals?
+                </p>
+                
                 <figure>
                 <img src="images/cel2.jpg" alt="Image of my Marvel Rivals Profile displaying only 12 hours this season as Celestial two.">
                     <figcaption> <i>My current Marvel Rivals Profile, I have only 12 hours this season with a 70% winrate on duelist.</i></figcaption>
                 </figure>
             </section>
             
-            <section id="ai_prompt">
-                <h2 id="section_title">My AI Prompts</h2>
+            <section id="ai_prompt" class="content">
+                <h2 class="section_title">My AI Prompts</h2>
                 <h3>My Prompts:</h3>
-                <p>How do I hide my HTML sections so that only a section that is clicked on is displayed? I think I know about an onclick method?</p>
+                <p>How do I hide my HTML sections so that only a section that is clicked on is displayed? I think I know about an onclick method?
+                    <br>
+                    What if I have a const sections and we pass through 'section', and for every section I remove 'active (lets let active be the class name). 
+                    By default one section will be active at the start (and only one always). If I click another section then it should make that section active while the others hidden.
+                </p>
                 <h3>Response:</h3>
                 <figure>
                     <img src="images/ai1.png" alt="First image of my AI Prompt to ChatGPT on hiding sections.">
                         <figcaption> <i>First image of my AI Prompt to ChatGPT on hiding sections.</i></figcaption>
                     </figure>
                 <figure>
-                    <img src="images/ai2.png" alt="First image of my AI Prompt to ChatGPT on hiding sections.">
+                    <img src="images/ai2.png" alt="Second image of my AI Prompt to ChatGPT on hiding sections.">
                         <figcaption> <i>Second image of my AI Prompt to ChatGPT on hiding sections.</i></figcaption>
                     </figure>
+                    <figure>
+                        <img src="images/ai3.png" alt="Third image of my AI Prompt to ChatGPT on hiding sections.">
+                            <figcaption> <i>Third image of my AI Prompt to ChatGPT on hiding sections.</i></figcaption>
+                        </figure>
             </section>
         </main>
 
