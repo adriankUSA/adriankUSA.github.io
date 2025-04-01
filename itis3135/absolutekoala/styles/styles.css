@@ -1,0 +1,33 @@
+
+body {
+    font-family: "Winky Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #737CCF;
+    color: #E1E5F8;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #2218A7;
+    padding: 20px;
+	min-height: 50px;
+    color: #E1E5F8;
+}
+
+main {
+    text-align: center;
+    flex: 1;
+}
+
+footer {
+    text-align: center;
+    background-color: #BBC4EB;
+    color: #E1E5F8;
+    padding: 20px;
+
+    justify-content: center;
+    flex: wrap;
+}
