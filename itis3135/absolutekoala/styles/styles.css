@@ -20,6 +20,17 @@ header {
 main {
     text-align: center;
     flex: 1;
+    justify-content: center;
+    
+}
+
+main figure {
+    justify-content: center;
+}
+
+figure img {
+    max-width: 80%;
+	height: auto;
 }
 
 footer {
@@ -30,4 +41,13 @@ footer {
 
     justify-content: center;
     flex: wrap;
+}
+
+header a {
+    text-decoration: underline;
+    color: #BBC4EB;
+    font-size: 110%;
+}
+header a:hover {
+    text-decoration: none;
 }

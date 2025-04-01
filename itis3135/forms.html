@@ -18,6 +18,74 @@
 
         <main>
             
+            <form action="#" method="post">
+                <div class="form-div">
+                    <label for="name" class="form-topic"> Name: </label>
+                    <input type="text" id="name" name="name" required placeholder="Adrian J. Khlim">
+                    <br>
+                    <label for="phone">Phone Number: </label>
+                    <input type="tel" id="phone" name="phone" required placeholder="(123)-123-1234">
+                    <br>
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" name="email" placeholder="abc123@gmail.com" required>
+                    <br>
+                    
+                    <p class="form-topic"><strong>Which Kendama Company Have You Shopped With Before?</strong></p>
+                    <br>
+                    
+                    <label for="kendamausa">KendamaUSA</label>
+                    <input type="checkbox" id="kendamausa" name="kendama_brands[]" value="KendamaUSA" />
+                    <br>
+
+                    <label for="krom">KROM Kendama</label>
+                    <input type="checkbox" id="krom" name="kendama_brands[]" value="KROM Kendama" />
+                    <br>
+
+                    <label for="sweets">Sweets Kendama</label>
+                    <input type="checkbox" id="sweets" name="kendama_brands[]" value="Sweets Kendama" />
+                    <br>
+
+                    <label for="lotus">Lotus Kendamas</label>
+                    <input type="checkbox" id="lotus" name="kendama_brands[]" value="Lotus Kendamas" />
+                    <br>
+
+                    <label for="terra">Terra Kendamas</label>
+                    <input type="checkbox" id="terra" name="kendama_brands[]" value="Terra Kendamas" />
+                    <br><br>
+
+                    <p class="form-topic"><strong>What is your Kendama Skill Level?</strong></p>
+
+                    <label for="beginner">Beginner</label>
+                    <input type="radio" id="beginner" name="skill_level" value="Beginner" required />
+                    <br>
+
+                    <label for="intermediate">Intermediate</label>
+                    <input type="radio" id="intermediate" name="skill_level" value="Intermediate" required />
+                    <br>
+
+                    <label for="advanced">Advanced</label>
+                    <input type="radio" id="advanced" name="skill_level" value="Advanced" required />
+                    <br>
+
+                    <label for="pro">Pro</label>
+                    <input type="radio" id="pro" name="skill_level" value="Pro" required />
+                    <br>
+
+                    <label for="referral" class="form-topic"><strong>How did you hear about us?</strong></label>
+                    <select id="referral" name="referral_source" required>
+                    <option value="">Please choose an option</option>
+                    <option value="ad">Ad</option>
+                    <option value="friend">Friend</option>
+                    <option value="social_media">Social Media</option>
+                    <option value="other">Other</option>
+                    </select>
+                    <br>
+
+                    <button type="reset">Reset</button>
+                    <button type="submit">Submit</button>
+                </div>
+
+            </form>>
 
         </main>
 

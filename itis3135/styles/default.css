@@ -94,3 +94,57 @@ ul li {
 figcaption {
     color: #D6536D;
 }
+
+.form-div {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding: 30px;
+    margin-top: 10px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: 1rem;
+
+}
+
+.form-div label, .form-div p {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.form-topic {
+    color: #E43D12;
+}
+
+.form-div input, .form-div select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-div input[type="checkbox"], .form-div input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.form-div button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #EFB11D;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.form-div button:hover {
+    background-color: #d39e1a;
+}
