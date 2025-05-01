@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Details - RadiateTPS</title>
+    <link rel="stylesheet" href="/itis3135/project/styles/default.css">
+</head>
+<body>
+    <header>
+        <img id="logo" src="images/radiatetps-high-resolution-logo.png">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="what-is-tps.html">What is TPS?</a></li>
+                <li><a href="radiatetps-project.html">My TPS Project</a></li>
+                <li><a href="technical-details.html">Technical Details</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Technical Details</h2>
+            <p>
+                RadiateTPS is powered by a combination of web technologies and DICOM handling libraries. It takes advantage of OpenTPS's Python-based dose computation capabilities and modern frontend frameworks to deliver a responsive and educational experience.
+            </p>
+        </section>
+
+        <section>
+            <h3>Tech Stack</h3>
+            <ul>
+                <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript, React.js (planned)</li>
+                <li><strong>Backend:</strong> Flask (Python), OpenTPS core components</li>
+                <li><strong>Data:</strong> DICOM, RT Structure Sets, CT images</li>
+                <li><strong>Tools:</strong> pydicom, numpy, matplotlib, Plotly</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Workflow Overview</h3>
+            <p>The user loads a dataset → selects ROI/dose parameters → receives processed dose visualization in-browser.</p>
+            <p>Below is a simplified visual breakdown:</p>
+            <img src="images/workflow_diagram.png" alt="Workflow Diagram" style="max-width:100%; height:auto;">
+        </section>
+
+        <section>
+            <h3>Expandable Sections (Planned)</h3>
+            <p>We plan to include accordion-style expandable sections for each component, such as:</p>
+            <ul>
+                <li>How dose calculation is performed</li>
+                <li>Explanation of DVH and ROI interpretation</li>
+                <li>How we integrate Python with frontend</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by Adrian Khlim | UNC Charlotte | Last updated April 2025</p>
+    </footer>
+</body>
+</html>
