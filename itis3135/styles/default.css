@@ -153,6 +153,64 @@ figcaption {
     background-color: #d39e1a;
 }
 
+.CRAP {
+    color: #E43D12;
+    text-decoration: underline;
+}
+
+.CRAP:hover {
+    text-decoration: none;
+    color: #EFB11D;
+}
+
+/* for tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    padding: 40px;
+    margin: 30px;
+}
+
+.table-sec {
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 20px;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: left;
+}
+
+
+tbody tr:nth-of-type(even) {
+    background-color: #FFE5B4;
+}
+
+tbody tr:nth-of-type(odd) {
+    background-color: #fff;
+}
+
+.row-span:nth-of-type(even){
+    background-color: #FFE5B4;
+}
+.row-span:nth-of-type(odd){
+    background-color: #fff;
+}
+
+tfoot {
+    background-color: #FFE5B4;
+    font-weight: bold;
+}
+
+ol {
+    width: fit-content; 
+    margin: 0 auto;      
+    text-align: left;      
+}
+
 /* for mobile devices/phones */
 @media screen and (max-width: 600px) {
     body {

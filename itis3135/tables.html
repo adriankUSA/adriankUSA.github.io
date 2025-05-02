@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrian Khlim's Absolute Koala ✿ ITIS 3135 ✿ Tables</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div data-include="components/header.html" data-replace="%title%:Tables"></div>
+    </header>
+
+    <main>
+        <section class="table-sec">
+            <h2>Absolute Koala's Employee Tables</h2>
+
+            <h3>My Tabular Data</h3>
+            <ol>
+                <li>Winter Soldier - buckyws@kendama.com - 8</li>
+                <li>Luna Snow - luna.snow@gmail.com - 12</li>
+                <li>Cloak Dagger - usagainsttheworld@rivals.com - 4</li>
+                <li>Jin Kazama - jin.kazama@tekken.com - 10</li>
+                <li>Aron Zhao - tsukizhao@absolutekoala.com - 5</li>
+                <li>Kim Nguyen - knguyen3@marsupials.net - 2</li>
+                <li>Sarah Wollesen - swolley@koalaforce.org - 5</li>
+            </ol>
+        </section>
+
+        <section class="table-sec">
+            <h3>Employee Data in a Simple Table</h3>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Years of Service</th>
+            </tr>
+
+            <tr>
+                <td>Winter Soldier</td> <td>buckyws@kendama.com</td> <td>8</td>
+            </tr>
+            <tr>
+                <td>Luna Snow</td> <td>luna.snow@gmail.com</td> <td>12</td>
+            </tr>
+            <tr>
+                <td>Cloak Dagger</td> <td>usagainstheworld@rivals.com</td> <td>4</td>
+            </tr>
+            <tr>
+                <td>Jin Kazama</td> <td>jin.kazama@tekken.com</td> <td>10</td>
+            </tr>
+            <tr>
+                <td>Aron Zhao</td> <td>tsukizhao@absolutekoala.com</td> <td>5</td>
+            </tr>
+            <tr>
+                <td>Kim Nguyen</td> <td>knguyen3@marsupials.net</td> <td>2</td>
+            </tr>
+            <tr>
+                <td>Sarah Wollesen</td> <td>knguyen3@marsupials.net</td> <td>5</td>
+            </tr>
+        </table>
+
+        </section>
+
+        <section class="table-sec">
+            <h3>Employee Data in a Simple Table</h3>
+        <figure>
+            <table>
+                <thead>
+                    <tr>
+                        <th id="dept" scope="col">Department</th>
+                        <th id="name" scope="col">Name</th>
+                        <th id="email" scope="col">Email</th>
+                        <th id="years" scope="col">Years of Service</th>
+                        <th id="salary" scope="col">Salary</th>
+                      </tr>
+                </thead>
+            
+              <tbody>
+                <tr>
+                    <td rowspan="2" class="row-span" headers="dept">Freight and Receiving</td>
+                    <td headers="name">Winter Soldier</td>
+                    <td headers="email">buckyws@kendama.com</td>
+                    <td headers="years">8</td>
+                    <td headers="salary">$120,000</td>
+                  </tr>
+                  <tr>
+                    <td headers="name">Luna Snow</td>
+                    <td headers="email">luna.snow@gmail.com</td>
+                    <td headers="years">12</td>
+                    <td headers="salary">$150,000</td>
+                  </tr>
+                
+                  <tr>
+                    <td rowspan="3" class="row-span" headers="dept">Sales</td>
+                    <td headers="name">Cloak Dagger</td>
+                    <td headers="email">usagainstheworld@rivals.com</td>
+                    <td headers="years">4</td>
+                    <td headers="salary">$75,000</td>
+                  </tr>
+                  <tr>
+                    <td headers="name">Jin Kazama</td>
+                    <td headers="email">jin.kazama@tekken.com</td>
+                    <td headers="years">10</td>
+                    <td headers="salary">$130,000</td>
+                  </tr>
+                  <tr>
+                    <td headers="name">Aron Zhao</td>
+                    <td headers="email">tsukizhao@absolutekoala.com</td>
+                    <td headers="years">5</td>
+                    <td headers="salary">$90,000</td>
+                  </tr>
+                
+                  <tr>
+                    <td rowspan="2" class="row-span" headers="dept">Order Fulfillment</td>
+                    <td headers="name">Kim Nguyen</td>
+                    <td headers="email">knguyen3@marsupials.net</td>
+                    <td headers="years">2</td>
+                    <td headers="salary">$70,000</td>
+                  </tr>
+                  <tr>
+                    <td headers="name">Sarah Wollesen</td>
+                    <td headers="email">knguyen3@marsupials.net</td>
+                    <td headers="years">5</td>
+                    <td headers="salary">$90,000</td>
+                  </tr>
+  
+              </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total years of service & Yearly Salary Expense:</td> 
+                        <td>46</td>
+                        <td>$725,000</td>
+                    </tr>
+                </tfoot>
+                
+              </table>
+              <br>
+              <figcaption style="color: black;">Employee Department, Service, and Salary Information</figcaption>
+        </figure>
+        </section>
+        
+          
+
+    </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+
+</html>
