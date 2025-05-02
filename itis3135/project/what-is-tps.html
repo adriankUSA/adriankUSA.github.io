@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What is TPS? - RadiateTPS</title>
     <link rel="stylesheet" href="/itis3135/project/styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -20,10 +21,10 @@
             </p>
         </section>
 
-        <section class="accordion">
+        <div class="accordion">
             <div class="accordion-item">
-                <div class="accordion-question">What does a TPS do?</div>
-                <div class="accordion-answer">
+                <div class="accordion-question" data-target="answer1">What does a TPS do?</div>
+                <div class="accordion-answer" id="answer1">
                     <p>A TPS performs several critical functions:</p>
                     <ul>
                         <li><strong>Dose Calculation:</strong> Estimates how much radiation reaches tissues.</li>
@@ -35,46 +36,48 @@
             </div>
 
             <div class="accordion-item">
-                <div class="accordion-question">What is Dose Calculation?</div>
-                <div class="accordion-answer">
+                <div class="accordion-question" data-target="answer2">What is Dose Calculation?</div>
+                <div class="accordion-answer" id="answer2">
                     <p>Treatment planning systems are able to analyze special regions of interests, such as tumors gathered from DICOM data, and calculates radiation beam dosage for the area, while also highlighting the area in which radiation should be applied.</p>
                 </div>
             </div>
 
             <div class="accordion-item">
-                <div class="accordion-question">What is Imaging Integration?</div>
-                <div class="accordion-answer">
-                    <p>A TPS imports CT, MRI, and PET images to map the internal anatomy of the patient and align radiation targets accurately.</p>
+                <div class="accordion-question" data-target="answer3">What is Imaging Integration?</div>
+                <div class="accordion-answer" id="answer3">
+                    <p>A TPS parses medical imaging data (DICOM files, CT, MRI) and maps the internal anatomy of the patient and align radiation targets accurately.</p>
                 </div>
             </div>
 
             <div class="accordion-item">
-                <div class="accordion-question">What is Contouring & ROI?</div>
-                <div class="accordion-answer">
+                <div class="accordion-question" data-target="answer4">What is Contouring & ROI?</div>
+                <div class="accordion-answer" id="answer4">
                     <p>Clinicians outline regions of interest (ROIs), such as tumors and critical structures, to guide treatment focus and dose distribution.</p>
                 </div>
             </div>
 
             <div class="accordion-item">
-                <div class="accordion-question">What is Treatment Simulation?</div>
-                <div class="accordion-answer">
+                <div class="accordion-question" data-target="answer5">What is Treatment Simulation?</div>
+                <div class="accordion-answer" id="answer5">
                     <p>TPS software simulates radiation delivery so clinicians can visualize the effects and fine-tune settings before actual treatment.</p>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
-        <p>Created by Adrian Khlim | UNC Charlotte | Last updated April 2025</p>
+        <div data-include="components/footer.html"></div>
     </footer>
 
     <script>
-        document.querySelectorAll('.accordion-question').forEach(item => {
-            item.addEventListener('click', () => {
-                const parent = item.parentElement;
-                parent.classList.toggle('active');
-            });
-        });
+        document.querySelectorAll('.accordion-question').forEach((question) => {
+    question.addEventListener('click', () => {
+        const targetId = question.getAttribute('data-target');
+        const targetAnswer = document.getElementById(targetId);
+        targetAnswer.classList.toggle('expanded');
+    });
+});
+
     </script>
     <script src="/itis3135/project/scripts/HTMLInclude.min.js"></script>
 </body>

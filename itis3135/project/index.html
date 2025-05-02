@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RadiateTPS - Home</title>
     <link rel="stylesheet" href="/itis3135/project/styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -12,10 +13,10 @@
         <div data-include="components/header.html"></div>
     </header>
 
-    <img id="heroimg" src="images/hero_img.png" alt="Free mountain, lake, moon vector edited by me">
+    <img id="heroimg" src="images/hero_img2.png" alt="Free mountain, lake, moon vector edited by me">
     <main id="main-content">
         <section class="hero">
-            <h2>Welcome to RadiateTPS</h2>
+            <h2 id="hero-h2">Welcome to RadiateTPS</h2>
             <p>
                 RadiateTPS is a browser-based adaptation of the open-source OpenTPS software, designed to make cancer treatment planning systems more accessible to researchers, students, and clinicians.
             </p>
@@ -23,10 +24,10 @@
 
 
         <section class="cards-section">
-            <h3>What You'll Find Here</h3>
-            <div class="card-grid">
+            <h3 class="cards-section-h3">What You'll Find Here</h3>
+            <div class="card-g">
                 <div class="card">
-                    <h4>Learn About TPS</h4>
+                    <h4 class="card-h4">Learn About TPS</h4>
                     <p>Understand the fundamentals of Treatment Planning Systems and their use in radiation therapy.</p>
                     <a href="what-is-tps.html" class="card-button">Learn More</a>
                 </div>
@@ -52,8 +53,9 @@
     </main>
 
     <footer>
-        <p>Created by Adrian Khlim | UNC Charlotte | Last updated April 2025</p>
+        <div data-include="components/footer.html"></div>
     </footer>
+    
 
     <script src="/itis3135/project/scripts/HTMLInclude.min.js"></script>
 

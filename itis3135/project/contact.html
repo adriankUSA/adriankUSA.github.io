@@ -5,29 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - RadiateTPS</title>
     <link rel="stylesheet" href="/itis3135/project/styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        #contact-sec {
+            padding: 10px;
+        }
+        #contact-main p, .contact-main-h2, .contact-main-h3 {
+            margin-left: 20px;
+        }
+    </style>
 </head>
 <body>
-    
     <header>
-        <img id="logo" src="images/radiatetps-high-resolution-logo.png">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="what-is-tps.html">What is TPS?</a></li>
-                <li><a href="radiatetps-project.html">My TPS Project</a></li>
-                <li><a href="technical-details.html">Technical Details</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div data-include="components/header.html"></div>
     </header>
 
-    <main>
-        <section>
-            <h2>Contact</h2>
+    <main id="contact-main">
+        <section id="contact-sec">
+            <h2 class="contact-main-h2">Contact</h2>
             <p>If you'd like to reach out with questions, feedback, or collaboration ideas, use the form below.</p>
         </section>
 
-        <section>
+        <div>
             <form class="form-div" id="contact-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -41,32 +40,45 @@
                 <button type="submit">Submit</button>
             </form>
 
-            <div id="thank-you" style="display:none; margin-top: 20px;">
+            <div id="thank-you" style="display:none; margin-top: 20px; text-align:center; font-size: 1.2em; color: green;">
                 <p>Thank you for contacting us! We'll get back to you soon.</p>
             </div>
-        </section>
+        </div>
 
         <section>
-            <h3>Client Information</h3>
+            <h3 class="contact-main-h3">Client Information</h3>
+            <p>If you would like to contact Dr.Yan to work on this project, or any of his other research, here is his information</p>
             <ul>
                 <li><strong>Name:</strong> Dr. Yonghong Yan</li>
                 <li><strong>Organization:</strong> UNC Charlotte – Department of Computer Science</li>
                 <li><strong>Email:</strong> yyan7@gmail.com</li>
-                <li><strong>Phone:</strong> [private]</li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <p>Created by Adrian Khlim | UNC Charlotte | Last updated April 2025</p>
+        <div data-include="components/footer.html"></div>
     </footer>
 
     <script>
         document.getElementById("contact-form").addEventListener("submit", function(e) {
             e.preventDefault();
-            this.style.display = "none";
-            document.getElementById("thank-you").style.display = "block";
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            if (!name || !email || !message) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            // AJAX simulation
+            setTimeout(() => {
+                document.getElementById("contact-form").style.display = "none";
+                document.getElementById("thank-you").style.display = "block";
+            }, 500);
         });
     </script>
+    <script src="/itis3135/project/scripts/HTMLInclude.min.js"></script>
 </body>
 </html>

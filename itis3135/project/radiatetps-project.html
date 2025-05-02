@@ -5,46 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My TPS Project - RadiateTPS</title>
     <link rel="stylesheet" href="/itis3135/project/styles/default.css">
-    <style>
-        .carousel {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            text-align: center;
-        }
-
-        .carousel img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .carousel-buttons {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-            padding: 0 10px;
-        }
-
-        .carousel-buttons button {
-            background-color: #362a84;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .carousel-buttons button:hover {
-            background-color: #2a206d;
-        }
-    </style>
+    <link rel="stylesheet" href="/itis3135/project/styles/radiate.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -52,14 +14,15 @@
     </header>
 
     <main>
-        <section>
-            <h2>About My TPS Project</h2>
+        <section id="radiate-about">
+            <h2>My TPS Project - RadiateTPS</h2>
             <p>
                 RadiateTPS is my undergraduate research project with Dr. Yonghong Yan at UNC Charlotte. The project brings OpenTPS, a treatment planning system for radiation therapy, into the browser using modern web technologies. Our goal is to make treatment planning concepts more accessible to students and educators.
             </p>
+            <img id="poster" src="images/poster.png" alt="Poster for RadiateTPS">
         </section>
 
-        <section>
+        <section id="goals">
             <h3>Goals</h3>
             <ul>
                 <li>Adapt OpenTPS to a browser-friendly, interactive interface</li>
@@ -68,11 +31,24 @@
             </ul>
         </section>
 
-        <section>
+        <section id="future-work">
+            <h3>Future Work</h3>
+            <ul>
+                <li>Visualize ROIs and CT images</li>
+                <li>Implement the ability to create and load patient information</li>
+                <li>Add plan creation & optimization</li>
+                <li>Research OpenTPS GUI code to understand how they implement their own code to create a UI</li>
+                <li>Redesign app based off GUI code</li>
+            </ul>
+        </section>
+
+        <a class="repo-button" href="https://github.com/adriankUSA/radiateTPS" target="_blank">Visit Project Repository</a>
+
+        <section id="project_gallery">
             <h3>Project Gallery</h3>
-            <p>Below are a few screenshots and mockups of RadiateTPS in development:</p>
+            <p>Below are a few screenshots and mockups of RadiateTPS in development including the tutorial page, and our charts rendered on the front end with Plotly.js:</p>
             <div class="carousel">
-                <img id="gallery-img" src="images/demo_ct.png" alt="CT Viewer Mockup">
+                <img id="gallery-img" src="images/tutorial_page.png" alt="CT Viewer Mockup">
                 <div class="carousel-buttons">
                     <button onclick="prevImage()">&#8592;</button>
                     <button onclick="nextImage()">&#8594;</button>
@@ -82,14 +58,15 @@
     </main>
 
     <footer>
-        <p>Created by Adrian Khlim | UNC Charlotte | Last updated April 2025</p>
+        <div data-include="components/footer.html"></div>
     </footer>
 
     <script>
         const images = [
-            'images/demo_ct.png',
-            'images/demo_roi.png',
-            'images/demo_dvh.png'
+            'images/test_chart.png',
+            'images/dvh.png',
+            'images/dose_dist.png',
+            'images/tutorial_page.png'
         ];
 
         let currentIndex = 0;
