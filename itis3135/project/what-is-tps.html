@@ -6,49 +6,76 @@
     <title>What is TPS? - RadiateTPS</title>
     <link rel="stylesheet" href="/itis3135/project/styles/default.css">
 </head>
+
 <body>
     <header>
-        <img id="logo" src="images/radiatetps-high-resolution-logo.png">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="what-is-tps.html">What is TPS?</a></li>
-                <li><a href="radiatetps-project.html">My TPS Project</a></li>
-                <li><a href="technical-details.html">Technical Details</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div data-include="components/header.html"></div>
     </header>
 
     <main>
-        <section>
-            <h2>What is a Treatment Planning System?</h2>
+        <section class="hero">
+            <h2>What is a Treatment Planning System (TPS)?</h2>
             <p>
-                A Treatment Planning System (TPS) is a critical tool used in radiation therapy for cancer treatment. It allows oncologists and medical physicists to plan how radiation will be delivered to a patient's tumor while minimizing exposure to surrounding healthy tissue.
+                A Treatment Planning System is a software application and tool used in radiation therapy to help plan, simulate, and evaluate the best course of radiation for cancer patients.
             </p>
-            <img src="images/tps_diagram.jpg" alt="Treatment Planning System Diagram" style="max-width:100%; height:auto;">
         </section>
 
-        <section>
-            <h3>Key Functions of a TPS</h3>
-            <ul>
-                <li>Importing and visualizing CT/MRI scan data</li>
-                <li>Defining target volumes (tumor) and organs at risk (OARs)</li>
-                <li>Calculating dose distributions using physics-based models</li>
-                <li>Visualizing dose-volume histograms (DVH)</li>
-                <li>Exporting the final treatment plan to clinical systems</li>
-            </ul>
-        </section>
+        <section class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-question">What does a TPS do?</div>
+                <div class="accordion-answer">
+                    <p>A TPS performs several critical functions:</p>
+                    <ul>
+                        <li><strong>Dose Calculation:</strong> Estimates how much radiation reaches tissues.</li>
+                        <li><strong>Imaging Integration:</strong> Uses CT/MRI scans for 3D planning.</li>
+                        <li><strong>Contouring & ROI:</strong> Defines tumor and healthy tissue boundaries.</li>
+                        <li><strong>Treatment Simulation:</strong> Visualizes and simulates treatment scenarios.</li>
+                    </ul>
+                </div>
+            </div>
 
-        <section>
-            <h3>Learn More with Interactive Content</h3>
-            <p>We plan to add expandable FAQs and interactive glossary sections to make learning about TPS easier and more engaging.</p>
-            <p><a href="https://www.w3schools.com/howto/howto_js_accordion.asp" target="_blank">Check out the accordion tutorial we'll be using</a>.</p>
+            <div class="accordion-item">
+                <div class="accordion-question">What is Dose Calculation?</div>
+                <div class="accordion-answer">
+                    <p>Treatment planning systems are able to analyze special regions of interests, such as tumors gathered from DICOM data, and calculates radiation beam dosage for the area, while also highlighting the area in which radiation should be applied.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">What is Imaging Integration?</div>
+                <div class="accordion-answer">
+                    <p>A TPS imports CT, MRI, and PET images to map the internal anatomy of the patient and align radiation targets accurately.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">What is Contouring & ROI?</div>
+                <div class="accordion-answer">
+                    <p>Clinicians outline regions of interest (ROIs), such as tumors and critical structures, to guide treatment focus and dose distribution.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-question">What is Treatment Simulation?</div>
+                <div class="accordion-answer">
+                    <p>TPS software simulates radiation delivery so clinicians can visualize the effects and fine-tune settings before actual treatment.</p>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>Created by Adrian Khlim | UNC Charlotte | Last updated April 2025</p>
     </footer>
+
+    <script>
+        document.querySelectorAll('.accordion-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+    <script src="/itis3135/project/scripts/HTMLInclude.min.js"></script>
 </body>
 </html>

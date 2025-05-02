@@ -7,19 +7,12 @@
     <link rel="stylesheet" href="/itis3135/project/styles/default.css">
 </head>
 <body>
+
     <header>
-        <img id="logo" src="images/radiatetps-high-resolution-logo.png">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="what-is-tps.html">What is TPS?</a></li>
-                <li><a href="radiatetps-project.html">My TPS Project</a></li>
-                <li><a href="technical-details.html">Technical Details</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div data-include="components/header.html"></div>
     </header>
-    <img id="heroimg" src="images/hero.png" alt="Looking at MRI scans">
+
+    <img id="heroimg" src="images/hero_img.png" alt="Free mountain, lake, moon vector edited by me">
     <main id="main-content">
         <section class="hero">
             <h2>Welcome to RadiateTPS</h2>
@@ -28,20 +21,41 @@
             </p>
         </section>
 
-        <section class="introduction">
+
+        <section class="cards-section">
             <h3>What You'll Find Here</h3>
-            <ul>
-                <li>An introduction to Treatment Planning Systems (TPS)</li>
-                <li>A walkthrough of my undergraduate research project with Dr. Yonghong Yan</li>
-                <li>A gallery of dose visualization and ROI-based planning techniques</li>
-                <li>Technical breakdowns and architecture used to port OpenTPS to the web</li>
-                <li>A contact form to reach out with questions or feedback</li>
-            </ul>
+            <div class="card-grid">
+                <div class="card">
+                    <h4>Learn About TPS</h4>
+                    <p>Understand the fundamentals of Treatment Planning Systems and their use in radiation therapy.</p>
+                    <a href="what-is-tps.html" class="card-button">Learn More</a>
+                </div>
+                <div class="card">
+                    <h4>My TPS Project</h4>
+                    <p>Explore the RadiateTPS project guided by Dr. Yan, with screenshots and progress insights.</p>
+                    <a href="radiatetps-project.html" class="card-button">View Project</a>
+                </div>
+                <div class="card">
+                    <h4>Technical Details</h4>
+                    <p>Dive into the architecture and technologies behind bringing OpenTPS to the browser.</p>
+                    <a href="technical-details.html" class="card-button">Explore</a>
+                </div>
+                <div class="card">
+                    <h4>Get in Touch</h4>
+                    <p>Reach out with questions, feedback, or collaboration ideas using the contact form.</p>
+                    <a href="contact.html" class="card-button">Contact</a>
+                </div>
+            </div>
         </section>
+        
+        
     </main>
 
     <footer>
         <p>Created by Adrian Khlim | UNC Charlotte | Last updated April 2025</p>
     </footer>
+
+    <script src="/itis3135/project/scripts/HTMLInclude.min.js"></script>
+
 </body>
 </html>
