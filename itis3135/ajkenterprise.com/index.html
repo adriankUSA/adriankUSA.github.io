@@ -1,26 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ajkenterprise</title>
-        <style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajkenterprise.com</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <!-- chewtle color scheme (my logo was paid by me and designed for me) -->
+    <style>
+        :root {
+            --blue: #58c3c7;       /* chewtle blue */
+            --orange: #f7941d;     /* chewtle orange */
+            --dark-blue: #224a57;  /* dark blue if needed*/
+            --light-bg: #f0fbfc;   /* bg color */
+        }
 
-        </style>
-    </head>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-bg);
+            margin: 0;
+            color: var(--dark-blue);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
 
-    <body>
-        <header>
-            AJK ENTERPRISE©
-            <img src="images/logo.png">
-        </header>
+        header {
+            background-color: var(--blue);
+            padding: 1em;
+            display: flex;
+            align-items: center;
+        }
 
-        <main>
+        header img {
+            height: 60px;
+            margin-right: 20px;
+        }
 
-        </main>
+        h1 {
+            font-size: 2em;
+            color: white;
+            margin: 0;
+        }
 
-        <footer>
+        main {
+            flex: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2em;
+        }
 
-        </footer>
-    </body>
+        h2, h3 {
+            color: var(--blue);
+        }
+
+        .custom-bullets {
+            list-style-type: square;
+            color: var(--orange);
+            padding-left: 1.2em;
+        }
+
+        .custom-bullets li {
+            margin-bottom: 10px;
+            color: var(--dark-blue);
+        }
+
+        .contact-block {
+            background-color: white;
+            padding: 1em;
+            border-left: 4px solid var(--orange);
+            margin-top: 2em;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: var(--blue);
+            color: white;
+            font-size: 0.9em;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img id="logo" src="images/logo1.png" alt="ajkenterprise logo">
+        <h1>ajkenterprise.com</h1>
+    </header>
+
+    <main>
+        <h2>A Jordan Khlim Enterprise</h2>
+        <p>ajkenterprise is a bold and dynamic digital design firm offering custom web solutions with a bite. Whether you're a researcher, entrepreneur, or educator, we aim to develop elegant, responsive, and accessible web experiences tailored to your needs.</p>
+        <h3>Our Services:</h3>
+        <ul class="custom-bullets">
+            <li>Pixel-perfect designs, inspired by the mighty Chewtle</li>
+            <li>Clean and modern HTML & CSS</li>
+            <li>Strong emphasis on accessibility and inclusivity</li>
+            <li>Innovative and modern UX design and wireframing</li>
+            <li>Flexible and responsive design principles</li>
+            <li>Deep knowledge of frontend JavaScript frameworks</li>
+            <li>Commitment to web performance and optimization</li>
+            <li>Veteran of client-centered development workflows</li>
+        </ul>
+
+        <p>Let ajkenterprise be the whirling force behind your next web project. We're ready to chew out your competition and hydro pump out the best design just for you.</p>
+
+        <div class="contact-block">
+            Contact us at:<br>
+            ajk@ajkenterprise.com<br>
+            (704) 123-4567<br>
+            9201 University City Blvd, Charlotte, NC 28223
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 ajkenterprise.com — Powerful bite, powerful designs.
+    </footer>
+</body>
 </html>
