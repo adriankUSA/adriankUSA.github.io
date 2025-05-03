@@ -211,6 +211,86 @@ ol {
     text-align: left;      
 }
 
+.byo-head {
+    color: black;
+}
+
+/* byo form */
+#intro-form {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Rubik', sans-serif;
+}
+
+/* labels and inputs */
+#intro-form label {
+    display: block;
+    margin-bottom: 1em;
+    font-weight: 500;
+}
+
+#intro-form input[type="text"],
+#intro-form input[type="file"],
+#intro-form input[type="email"] {
+    display: block;
+    width: 100%;
+    padding: 0.6em;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 0.4em;
+    box-sizing: border-box;
+}
+
+/* checkbox alignment */
+#intro-form input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-right: 0.5em;
+}
+
+/* buttons */
+#intro-form input[type="submit"],
+#intro-form input[type="reset"],
+#intro-form button {
+    padding: 0.6em 1.2em;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #58c3c7; 
+    color: white;
+    margin-top: 1em;
+    margin-right: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#intro-form input[type="submit"]:hover,
+#intro-form input[type="reset"]:hover,
+#intro-form button:hover {
+    background-color: #3baab0;
+}
+
+/* add/delete spacing */
+.course {
+    margin-top: 0.4em;
+}
+
+#courses-section button {
+    margin-top: 0.5em;
+}
+
+/* vertical spacing fix */
+#intro-form label + br,
+#intro-form input + br {
+    display: none;
+}
+
+
+
 /* for mobile devices/phones */
 @media screen and (max-width: 600px) {
     body {
