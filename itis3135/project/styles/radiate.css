@@ -84,12 +84,19 @@
 }
 
 #goals {
-    margin-left: 30px;
+    margin-left: 0;
     border-top: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #future-work {
-    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    align-items: center;
 }
 
 

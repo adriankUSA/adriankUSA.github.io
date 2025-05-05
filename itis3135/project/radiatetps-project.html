@@ -44,6 +44,7 @@
 
         <a class="repo-button" href="https://github.com/adriankUSA/radiateTPS" target="_blank">Visit Project Repository</a>
 
+        <!-- image gallery -->
         <section id="project_gallery">
             <h3>Project Gallery</h3>
             <p>Below are a few screenshots and mockups of RadiateTPS in development including the tutorial page, and our charts rendered on the front end with Plotly.js:</p>
@@ -61,31 +62,7 @@
         <div data-include="components/footer.html"></div>
     </footer>
 
-    <script>
-        const images = [
-            'images/test_chart.png',
-            'images/dvh.png',
-            'images/dose_dist.png',
-            'images/tutorial_page.png'
-        ];
-
-        let currentIndex = 0;
-        const galleryImg = document.getElementById('gallery-img');
-
-        function showImage(index) {
-            galleryImg.src = images[index];
-        }
-
-        function prevImage() {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            showImage(currentIndex);
-        }
-
-        function nextImage() {
-            currentIndex = (currentIndex + 1) % images.length;
-            showImage(currentIndex);
-        }
-    </script>
+    <script src="scripts/gallery.js"></script>
     <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>

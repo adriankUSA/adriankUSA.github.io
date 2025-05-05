@@ -20,7 +20,7 @@
                 A Treatment Planning System is a software application and tool used in radiation therapy to help plan, simulate, and evaluate the best course of radiation for cancer patients.
             </p>
         </section>
-
+        <!-- accordion expandables -->
         <div class="accordion">
             <div class="accordion-item">
                 <div class="accordion-question" data-target="answer1">What does a TPS do?</div>
@@ -69,16 +69,7 @@
         <div data-include="components/footer.html"></div>
     </footer>
 
-    <script>
-        document.querySelectorAll('.accordion-question').forEach((question) => {
-    question.addEventListener('click', () => {
-        const targetId = question.getAttribute('data-target');
-        const targetAnswer = document.getElementById(targetId);
-        targetAnswer.classList.toggle('expanded');
-    });
-});
-
-    </script>
+    <script src="scripts/accordion.js"> </script>
     <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>

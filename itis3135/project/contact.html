@@ -6,14 +6,6 @@
     <title>Contact - RadiateTPS</title>
     <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <style>
-        #contact-sec {
-            padding: 10px;
-        }
-        #contact-main p, .contact-main-h2, .contact-main-h3 {
-            margin-left: 20px;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -25,7 +17,8 @@
             <h2 class="contact-main-h2">Contact</h2>
             <p>If you'd like to reach out with questions, feedback, or collaboration ideas, use the form below.</p>
         </section>
-
+        
+        <!-- form div -->
         <div>
             <form class="form-div" id="contact-form">
                 <label for="name">Name:</label>
@@ -38,8 +31,8 @@
                 <textarea id="message" name="message" rows="5" required></textarea>
 
                 <button type="submit">Submit</button>
-            </form>
-
+            </form> 
+            <!-- hidden thank you div for when user submits form -->
             <div id="thank-you" style="display:none; margin-top: 20px; text-align:center; font-size: 1.2em; color: green;">
                 <p>Thank you for contacting us! We'll get back to you soon.</p>
             </div>
@@ -50,7 +43,7 @@
             <p>If you would like to contact Dr.Yan to work on this project, or any of his other research, here is his information</p>
             <ul>
                 <li><strong>Name:</strong> Dr. Yonghong Yan</li>
-                <li><strong>Organization:</strong> UNC Charlotte – Department of Computer Science</li>
+                <li><strong>Organization:</strong> UNC Charlotte - Department of Computer Science</li>
                 <li><strong>Email:</strong> yyan7@gmail.com</li>
             </ul>
         </section>
@@ -60,25 +53,7 @@
         <div data-include="components/footer.html"></div>
     </footer>
 
-    <script>
-        document.getElementById("contact-form").addEventListener("submit", function(e) {
-            e.preventDefault();
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const message = document.getElementById("message").value.trim();
-
-            if (!name || !email || !message) {
-                alert("Please fill in all fields.");
-                return;
-            }
-
-            // AJAX simulation
-            setTimeout(() => {
-                document.getElementById("contact-form").style.display = "none";
-                document.getElementById("thank-you").style.display = "block";
-            }, 500);
-        });
-    </script>
+    <script src="scripts/contact.js"></script>
     <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
